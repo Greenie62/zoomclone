@@ -1,0 +1,62 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    position:relative;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.login-header, 
+.login-footer{
+    background:rgb(0,0,255,0.8);
+    color:white;
+    height:12vh;
+}
+
+.login-card{
+    height:50vh;
+    background:linear-gradient(to right,gray,lightgray);
+    
+}
+
+.login-column{
+    text-align:center;
+    top:15%;
+}
+
+.login-input{
+    width:125px;
+    padding:.15em;
+    height:20px;
+    outline:none;
+    background:lightgray;
+}
+
+
+.loginbtn{
+    width:100px;
+    background:green;
+    top:5px;
+}
+
+.loginbtn:hover,.active{
+    text-decoration:underline;
+}
+
+
+.login-footer{
+    height:5vh;
+    text-align:center;
+
+
+}
+
+
+.h1-header{
+    left:15%;
+}
+
+.h4-header{
+    left:35%;
+}

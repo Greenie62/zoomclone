@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/chat.css">
+    <script src="../../socket.io/socket.io.js"></script>
+    <title>Welcome to Zoom, <%=user %>! 😏</title>
+</head>
+<body>
+    <div class="chat-header">
+        <h2 class='chat-header-h2'>Hey There <span class='user'><%=user %></span> </h2>
+            <h3 class='chat-header-h3'>welcome to <span class='room'><%=room%></span></h3>
+    </div>
+
+    <div class="chat-body">
+        <div class="big-column">
+        <div class="video-area"></div>
+        <div class="options-panel"></div>
+        </div>
+
+        <div class="small-column">
+            <div class="socket-chat-header">
+                <h3 class='h5chatheader'><%=room%> Chat</h3>
+                <h5>Users:<span class='usersDOM'></span></h5>
+            </div>
+            <div class="chat-text-area"></div>
+            <div class="textareadiv">
+                <label for="message">Send a Message</label>
+                <textarea autofocus name="message" id="messagefield" class="messagetextarea"></textarea>
+                <button class='messagebtn'>Send</button>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    
+    <div class="chat-footer">
+        <p>Footer&copy;</p>
+    </div>
+
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    position:relative;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.chat-header, .chat-footer{
+    height:10vh;
+    width:100%;
+    background:rgb(255,0,0,.8);
+    text-transform:uppercase;
+}
+
+
+.chat-header-h2{
+    left:5%;
+    top:5%;
+}
+
+
+.chat-header-h3{
+    top:10%;
+    left:25%;
+}
+
+
+.chat-body{
+    height:70vh;
+    width:100%;
+    display:flex;
+}
+
+.big-column{
+    width:65%;
+    height:100%;
+    /* border:1px solid red; */
+}
+
+.video-area{
+    width:100%;
+    height:85%;
+    /* border:1px solid black; */
+}
+
+.small-column{
+    width:35%;
+    height:100%;
+}
+
+.socket-chat-header, .chat-text-area, .textareadiv{
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.socket-chat-header{
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+    height:10%;
+    width:100%;
+    background:lightgray;
+}
+
+.h5chatheader{
+    /* top:25%; */
+    text-transform:uppercase;
+    text-decoration:underline;
+}
+
+.message-div{
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+    padding:.5em;
+}
+
+
+
+.admin{
+    color:red;
+}
+
+.userflex{
+    display:flex;
+    align-items:center;
+    justify-content: flex-start;
+ 
+}
+
+.chat-text-area{
+    height:60%;
+    top:10%;
+    width:100%;
+    /* border:2px solid purple; */
+}
+
+.textareadiv{
+    top:60%;
+    height:40%;
+    top:60%;
+    text-align:center;
+    background:lightgray;
+}
+
+.messagetextarea{
+    height:72%;
+    width:100%;
+    background:lightgray;
+    outline:none;
+    font-size:15px;
+    border:none;
+    border-top:1px solid black;
+    overflow:auto;
+}
+
+
+.messagebtn{
+    width:100%;
+    cursor:pointer;
+    background:rgb(255,0,0,0.8)
+}
+
+
+
+.chat-footer{
+    text-align:center;
+    height:5vh;
+}

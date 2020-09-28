@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+    <title>Zoom Login 🔍</title>
+</head>
+<body>
+    <div class="login-header">
+        <h1 class='h1-header'>Zoom Chat 💬 Log-In </h1>
+        <h4 class='h4-header'>A Node.js n Javascript application...</h4>
+    </div>
+    <div class="login-body">
+      <form class='clientform'>
+        <div class="login-card">
+            <div class="login-column">
+                <h3><label for="username">Username:</label></h3>
+                <input autofocus type="text" id="username" class="login-input" name="username" placeholder="username..." autocomplete="off">
+                <br/>
+                <small class='text-muted'>This will be your chatroom username!😎</small>
+            </div>
+            <div class="login-column">
+                <h3><label for="room">Chat Room:</label></h3>
+                <input type="text" id="room" class="login-input" name="room" placeholder="chatroom..." autocomplete="off">
+                <br/>
+                <small class='text-muted'>This will be the name of the room your directed to!🏄🏽‍♂️</small>
+            </div>
+            <div class="login-column">
+            <button type='submit' class='loginbtn'>Login</button>
+            </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="login-footer">
+        <p>Footer&copy;</p>
+    </div>
+</body>
+
+
+<script>
+var loginBtn= document.querySelector(".loginbtn")
+
+loginBtn.onclick=(e)=>{
+    e.preventDefault();
+    console.log("Form Submitted")
+    var form=new FormData(document.querySelector(".clientform"));
+
+    let user={
+        username:form.get("username"),
+        room:form.get("room")
+    }
+
+    console.log(user)
+
+
+    fetch("/login",{
+        method:"POST",
+        headers:{
+            'Content-Type':"application/json"
+        },
+        body:JSON.stringify(user)
+    })
+    window.location.pathname = `/chat/${user.room}/${user.username}`
+
+    // .then(res=>res.json())
+    // .then(res=>{
+    //     console.log(res);
+    // })
+}
+
+
+
+</script>
+</html>
