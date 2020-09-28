@@ -2,7 +2,7 @@ const express = require('express');
 
 
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 const routes = require("./routes");
 const monitorLanguage = require('./utils/monitorLanguage')
 
@@ -90,4 +90,4 @@ function errorHandler(err,req,res,next){
 
 
 
-server.listen(8080,console.log(`Listening in on port 8080`))
+server.listen(PORT,console.log(`Listening in on port ${PORT}`))
