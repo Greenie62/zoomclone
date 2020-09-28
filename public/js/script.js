@@ -1,6 +1,6 @@
 console.log("hey asshole!")
 
-let socket = io.connect("http://localhost:3005");
+let socket = io.connect("http://localhost:8080");
 let userDOM=document.querySelector(".usersDOM")
 let USER = document.querySelector(".user").innerHTML
 let ROOM = document.querySelector(".room").innerHTML

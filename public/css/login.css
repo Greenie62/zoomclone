@@ -14,9 +14,23 @@
     height:12vh;
 }
 
-.login-card{
-    height:50vh;
+.login-body{
+    height:70vh;
     background:linear-gradient(to right,gray,lightgray);
+}
+
+.clientform{
+    left:25%;
+    top:25%;
+    height:50%;
+    width:50%;
+}
+
+.login-card{
+    /* height:50%;
+    width:50%;
+    left:25%;
+    top:25%; */
     
 }
 
@@ -42,6 +56,33 @@
 
 .loginbtn:hover,.active{
     text-decoration:underline;
+}
+
+
+.uploadphotodiv{
+    width:100%;
+    height:20%;
+    outline:1px solid red;
+    top:20%;
+}
+
+.uploadphotobtn{
+    top:25%;
+    left:25%;
+}
+
+.uploadphotobtn{
+    height:50px;
+    width:85px;
+    border-radius:50%;
+    cursor:pointer;
+    transition:1s ease;
+    text-transform:uppercase;
+    outline:none;
+}
+
+.uploadphotobtn:hover{
+    opacity:.8;
 }
 
 

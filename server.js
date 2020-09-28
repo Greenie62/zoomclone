@@ -56,8 +56,8 @@ io.on('connection',(socket)=>{
         console.log(disconnectedUser)
         console.log('user has disconnected')
         if(disconnectedUser !== undefined){
-        io.to(disconnectedUser.room).emit('message',{user:'admin',text:`${disconnectedUser.username} has left the chat.`})
-        io.to(disconnectedUser.room).emit('roomData',{room:disconnectedUser.room,users:users})
+            io.to(disconnectedUser.room).emit('message',{user:'admin',text:`${disconnectedUser.username} has left the chat.`})
+            io.to(disconnectedUser.room).emit('roomData',{room:disconnectedUser.room,users:users})
         }
     })
 })
@@ -90,4 +90,4 @@ function errorHandler(err,req,res,next){
 
 
 
-server.listen(PORT,console.log(`Listening in on port ${PORT}`))
+server.listen(8080,console.log(`Listening in on port ${PORT}`))
